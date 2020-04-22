@@ -1,0 +1,24 @@
+2020-04-14 09:57:47.431  INFO 22236 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on DESKTOP-43MSA0U with PID 22236 (D:\soft\idea_project\springBoot2\target\classes started by Administrator in D:\soft\idea_project\springBoot2)
+2020-04-14 09:57:47.438  INFO 22236 --- [main] com.example.demo.DemoApplication         : The following profiles are active: student1
+2020-04-14 09:57:49.222  INFO 22236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 09:57:49.264  INFO 22236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 JPA repository interfaces.
+2020-04-14 09:57:50.032  INFO 22236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-14 09:57:50.045  INFO 22236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-14 09:57:50.045  INFO 22236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 09:57:50.198  INFO 22236 --- [main] o.a.c.c.C.[.[localhost].[/springBoot]    : Initializing Spring embedded WebApplicationContext
+2020-04-14 09:57:50.199  INFO 22236 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2623 ms
+2020-04-14 09:57:50.478  INFO 22236 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 09:57:50.731  INFO 22236 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 09:57:50.937  INFO 22236 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 09:57:51.171  INFO 22236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-14 09:57:51.390  INFO 22236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-14 09:57:51.420  INFO 22236 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-04-14 09:57:51.831  INFO 22236 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 09:57:51.845  INFO 22236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 09:57:52.123  INFO 22236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-14 09:57:52.418  INFO 22236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/springBoot'
+2020-04-14 09:57:52.425  INFO 22236 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 6.196 seconds (JVM running for 9.539)
+2020-04-14 10:00:26.037  INFO 22236 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-14 10:00:26.039  INFO 22236 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 10:00:26.043  INFO 22236 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-14 10:00:26.054  INFO 22236 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

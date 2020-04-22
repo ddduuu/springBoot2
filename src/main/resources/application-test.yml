@@ -1,0 +1,9 @@
+student:
+  name: 111
+  age: 11
+  sex: 男
+  content: name:${student.name},age:${student.age},sex:${student.sex}
+server:
+  port: 8882
+  servlet:
+    context-path: /springBootTest
