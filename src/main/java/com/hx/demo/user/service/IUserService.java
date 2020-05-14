@@ -1,9 +1,10 @@
-package com.hx.demo.student.service;
+package com.hx.demo.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hx.demo.student.entity.User;
+import com.hx.demo.user.entity.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -16,5 +17,7 @@ import java.util.List;
 public interface IUserService extends IService<User> {
 
     List<User> listasa();
+
+    List<Map<String, Object>> getStatisticsAll(String sql);
 
 }

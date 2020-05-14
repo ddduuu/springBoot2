@@ -22,6 +22,7 @@ public class EmailController {
         try {
             //填写邮箱服务器，如是QQ邮箱服务器，直接用：smtp.qq.com
             email.setHostName("smtp.163.com");
+            //设置编码格式
             email.setCharset("UTF-8");
             //设置收件人邮箱地址
             email.addTo("709511500@qq.com");

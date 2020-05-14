@@ -15,12 +15,14 @@ public class StrdentController {
 //    private StudentRep studentRep;
     private StudentService studentService;
 
-    @GetMapping(value = "/getAllStudent")//@GetMapping等介于@RequestMapping和method=RequestMethod.GET
+    //@GetMapping等介于@RequestMapping和method=RequestMethod.GET
+    @GetMapping(value = "/getAllStudent")
     public List getAllStudent() {
         return studentService.getAllStudent();
     }
 
-    @PostMapping(value = "/saveStudent")//@PostMapping等介于@RequestMapping和method=RequestMethod.POST
+    //@PostMapping等介于@RequestMapping和method=RequestMethod.POST
+    @PostMapping(value = "/saveStudent")
     //@RequestParam String name, @RequestParam String age, @RequestParam String sex
     public Student saveStudent(Student stu) {
         return studentService.saveStudent(stu);

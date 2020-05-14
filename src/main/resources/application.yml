@@ -2,23 +2,28 @@ spring:
   #  自定义配置文件
   profiles:
     active: prod
+  resources:
+    static-locations: classpath:/static
   #数据库连接
-  datasource:
-    url: jdbc:mysql://localhost:3306/springboot_student?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/springboot_student?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.jdbc.Driver
   jpa:
     open-in-view: false
     show-sql: true
-    hibernate:
-      #jpa hibernate自动生成表 update不存在创建,存在更新表 create每次执行都创建新的表
-      ddl-auto: update
-      use-new-id-generator-mappings: false
+  #设置上传文件的最大文件大小
+  servlet:
+    multipart:
+      max-request-size: 10MB
+      max-file-size: 10MB
+#    hibernate:
+#      #jpa hibernate自动生成表 update不存在创建,存在更新表 create每次执行都创建新的表
+#      ddl-auto: update
+#      use-new-id-generator-mappings: false
+
 # 指定全局配置文件
-#mybatis-plus:
-#  #config-location: classpath:mybatis-config.xml
-#  # 指定mapper.xml文件
-#  mapper-locations: classpath*:mapper/student/*.xml
-mybatis:
-  mapper-locations: classpath*:/mapper/student/*.xml
+# 指定mapper.xml文件
+#mybatis:
+#  mapper-locations: classpath*:/mapper/student/*.xml

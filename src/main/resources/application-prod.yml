@@ -7,3 +7,10 @@ server:
   port: 8881
   servlet:
     context-path: /springBootProd
+spring:
+  #数据库连接
+  datasource:
+    url: jdbc:oracle:thin:@192.168.48.133:1521:orcl
+    username: uecarch
+    password: uecarch
+    driver-class-name: oracle.jdbc.driver.OracleDriver

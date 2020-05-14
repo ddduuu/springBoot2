@@ -1,7 +1,10 @@
-package com.hx.demo.student.mapper;
+package com.hx.demo.user.mapper;
 
-import com.hx.demo.student.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.hx.demo.user.entity.User;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,5 +16,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface UserMapper extends BaseMapper<User> {
 
+    @Select("select * from user")
+    List<User> selectUser();
 
 }

@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.hx.demo.student","com.example"})
+@ComponentScan(basePackages = {"com.hx.demo.*","com.example"})
 //@EntityScan(basePackages = {"com.example.pojo"})
-@MapperScan(basePackages = {"com.hx.demo.student.mapper"})
+@MapperScan(basePackages = {"com.hx.demo.*.mapper"})
 public class DemoApplication {
 
     public static void main(String[] args) {

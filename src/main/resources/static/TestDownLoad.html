@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script >
+    var path;
+    /**
+     * 原生js下载模板demo1
+     */
+    function downloadTemDomo1() {
+        console.log('1');
+        getDownPath();
+        window.open(path);
+    }
+    /**
+     * 原生js下载模板demo2
+     */
+    function downloadTemDomo2() {
+        getDownPath();
+        var _form = document.createElement('FORM');
+        _form.setAttribute('method', 'get');
+        _form.setAttribute('action', path);
+        document.body.appendChild(_form);
+        _form.submit();
+        console.log('2');
+    }
+    /**
+     * 原生js下载模板demo3
+     */
+    function downloadTemDomo3() {
+        getDownPath();
+        window.location.href = path;
+        console.log('3');
+    }
+    /**
+     * 原生js下载模板demo4
+     */
+    function downloadTemDomo4() {
+        getDownPath();
+        //创建一个a标签属性
+        var download = document.createElement("a");
+        // a.download = "tem.xlsx";
+        //赋值a标签href值
+        download.href = path;
+        //添加到body属性里
+        document.body.appendChild(download);
+        //触发事件
+        download.click();
+        //移除属性
+        document.body.removeChild(download);
+        console.log('4');
+    }
+
+    /**
+     * 获取下载路径
+     */
+    function getDownPath(){
+        let rootPath = getRootPath();
+        path = '/'+rootPath+'/template/tem.xlsx';
+    }
+    function getRootPath(){
+        //pathName:--->  springBoot/TestDownLoad.html
+        var pathName = window.location.pathname.substring(1);
+        //webName:--->springBoot
+        var webName = pathName == '' ? '' : pathName.substring(0, pathName.indexOf('/'));
+        return webName;
+    }
+</script>
+<body>
+<button onclick="downloadTemDomo4()">测试下载模板</button>
+<a href="fileUpload.html">单文件上传</a><br/>
+<a href="multifileUpload.html">多文件上传</a>
+</body>
+</html>
