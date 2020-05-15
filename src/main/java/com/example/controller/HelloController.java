@@ -2,6 +2,8 @@ package com.example.controller;
 
 import com.example.pojo.Student;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -17,6 +19,7 @@ public class HelloController {
     @Resource
     private Student student;
 
+//    @RequestMapping(value = "/getStr")
     @GetMapping(value = "/getStr")
     public String getStr(){
         String s = "测试"+student.getName();
@@ -25,8 +28,9 @@ public class HelloController {
     }
 
     //访问/hello或者/hi任何一个地址，都会返回一样的结果
-    @GetMapping(value = {"/hello","/hi"})
+    @RequestMapping(value = {"/hello","/hi"},method = RequestMethod.GET)
     public String say(){
+
         return "hi you!!!,年龄："+student.getAge()+",性别："+student.getSex();
     }
 
