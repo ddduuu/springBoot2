@@ -1,5 +1,6 @@
 package com.example.pojo;
 
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "tab_student")
 @org.hibernate.annotations.Table(appliesTo = "tab_student",comment = "这是一个表注释")
+@Data
 public class Student implements Serializable {
     @Id
 //    @GeneratedValue//默认native @GeneratedValue()
@@ -30,59 +32,4 @@ public class Student implements Serializable {
     @Column(name = "phone",length = 20)
     private String phone;
 
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }

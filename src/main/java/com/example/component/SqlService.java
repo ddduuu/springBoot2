@@ -1,5 +1,6 @@
 package com.example.component;
 
+import lombok.AllArgsConstructor;
 import org.hibernate.SQLQuery;
 import org.hibernate.transform.Transformers;
 import org.springframework.stereotype.Component;
