@@ -3,7 +3,7 @@ student:
   age: 22
   sex: 女
   content: name:${student.name},age:${student.age},sex:${student.sex}
-server:
+  server:
   port: 8880
   servlet:
     context-path: /springBootDev

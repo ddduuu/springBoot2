@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>springBoot测试Thymeleaf传值</title>
+</head>
+<body>
+    <span th:text="'用户id为：'+${userid}"></span><br>
+    <span th:text="'用户名称为：'+${userName}"></span><br>
+    <sapn th:text="'数学计算1+2='+(1+2)"></sapn><br>
+    <sapn th:utext="'用户地址：'+${userAddress}"></sapn><br>
+    <a th:href="@{/getStr}">访问controller方法</a><br>
+    <a th:href="@{/static_index.html}">访问静态页面</a><br>
+    <div th:include="/commons/footer :: companyInfo" th:with="projectName=百度"/>
+</body>
+</html>

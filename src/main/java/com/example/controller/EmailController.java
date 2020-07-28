@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServlet;
+
 /**
  *
  * @author dzh
@@ -14,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/email")
 @Scope(value = "prototype")
-public class EmailController {
+public class EmailController extends HttpServlet {
 
     @RequestMapping("/sendEmail")
     public static int sendEmail(){
